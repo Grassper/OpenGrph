@@ -1,21 +1,24 @@
 module.exports = {
+  root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:@typescript-eslint/recommended',
     'next',
     'next/core-web-vitals',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
-  env: {
-    es6: true,
-    browser: true,
-    jest: true,
-    node: true,
-  },
+  plugins: ['react', 'simple-import-sort', 'import', '@typescript-eslint'],
   rules: {
+    'prettier/prettier': ['warn', {}, { usePrettierrc: true }],
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error',
     'react/jsx-sort-props': [
       'error',
       {
@@ -23,14 +26,12 @@ module.exports = {
         reservedFirst: true,
       },
     ],
-    'sort-imports': [
+    'jsx-a11y/anchor-is-valid': [
       'error',
       {
-        ignoreCase: true,
-        ignoreDeclarationSort: false,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        allowSeparatedGroups: true,
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton'],
       },
     ],
   },

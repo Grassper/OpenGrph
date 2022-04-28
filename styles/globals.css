@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&family=Roboto+Slab:wght@400;500;600&display=swap');
+
+:root {
+  --color-primary: #1c5d50;
+  --color-lightBackground: #f3f3f3;
+  --color-darkBackground: #1e293b;
+}
+
+body {
+  background: var(--color-lightBackground);
+}
+
+.dark body {
+  background: var(--color-darkBackground);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
