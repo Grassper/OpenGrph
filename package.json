@@ -1,0 +1,43 @@
+{
+  "name": "nextjs-typescript-starter-kit",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "prepare": "husky install",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "lint-fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
+    "precommit": "lint-staged && pretty-quick --staged",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\" --config ./.prettierrc.js"
+  },
+  "dependencies": {
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@types/react": "17.0.15",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "autoprefixer": "^10.4.1",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.0.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
+    "postcss": "^8.4.5",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "tailwindcss": "^3.0.11",
+    "typescript": "4.3.5"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": "eslint --fix"
+  }
+}
