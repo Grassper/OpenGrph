@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { fontPairs as fontData } from '@/root/components/screen/Home/Components';
+import {
+  fontPairs as fontData,
+  patterns as patternData,
+} from '@/root/components/screen/Home/Components';
 
 interface PropsTypes {
   children: React.ReactNode;
@@ -17,8 +20,8 @@ interface ContextValues {
   setTheme: React.Dispatch<React.SetStateAction<string>>;
   color: string;
   setColor: React.Dispatch<React.SetStateAction<string>>;
-  pattern: string;
-  setPattern: React.Dispatch<React.SetStateAction<string>>;
+  pattern: keyof typeof patternData;
+  setPattern: React.Dispatch<React.SetStateAction<keyof typeof patternData>>;
   format: string;
   setFormat: React.Dispatch<React.SetStateAction<string>>;
   fontPairs: keyof typeof fontData;
@@ -36,7 +39,7 @@ export const InputContext = React.createContext<ContextValues>({
   setTheme: () => undefined,
   color: '',
   setColor: () => undefined,
-  pattern: '',
+  pattern: 'jigsaw',
   setPattern: () => undefined,
   format: '1200 x 630',
   setFormat: () => undefined,
@@ -52,7 +55,8 @@ export const InputContextProvider: React.FC<PropsTypes> = ({ children }) => {
   );
   const [theme, setTheme] = React.useState('Clean');
   const [color, setColor] = React.useState('');
-  const [pattern, setPattern] = React.useState('');
+  const [pattern, setPattern] =
+    React.useState<keyof typeof patternData>('jigsaw');
   const [format, setFormat] = React.useState('Png');
   const [fontPairs, setFontPairs] = React.useState<keyof typeof fontData>(
     'Open Sans + PT Sans'

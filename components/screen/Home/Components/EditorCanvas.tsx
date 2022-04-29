@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-ignore
+import * as hero from 'hero-patterns';
 import React from 'react';
 import { BsDownload } from 'react-icons/bs';
-import { FaLeaf } from 'react-icons/fa';
 
 import { InputContext } from '@/root/context';
 
@@ -71,6 +73,13 @@ export const fontPairs = {
   },
 };
 
+export const patterns = {
+  none: '',
+  jigsaw: hero.jigsaw,
+  overcast: hero.overcast,
+  formalInvitation: hero.formalInvitation,
+};
+
 export const EditorCanvas = () => {
   const inputState = React.useContext(InputContext);
   const editorRef = React.useRef<HTMLDivElement>(null);
@@ -94,6 +103,13 @@ export const EditorCanvas = () => {
     };
 
     formalFun[key]();
+  };
+
+  const patterHandler = () => {
+    if (inputState.pattern !== 'none') {
+      return patterns[inputState.pattern]('red', 0.5);
+    }
+    return '';
   };
 
   if (inputState.theme === 'Modern') {
@@ -148,7 +164,10 @@ export const EditorCanvas = () => {
           </div>
           <div
             className="h-[100px] w-full"
-            style={{ backgroundColor: '#e9ecef' }}></div>
+            style={{
+              backgroundColor: '#e9ecef',
+              backgroundImage: patterHandler(),
+            }}></div>
         </div>
       </div>
     );
@@ -169,9 +188,6 @@ export const EditorCanvas = () => {
             backgroundColor: '#ffffff',
           }}>
           <div className="w-3/4 p-10">
-            <motion.div
-              className="h-14 w-14 bg-gray-900 rounded-full"
-              drag></motion.div>
             <motion.h1
               className="leading-snug mt-4"
               drag
@@ -227,7 +243,10 @@ export const EditorCanvas = () => {
         }}>
         <div
           className="w-1/4 h-full"
-          style={{ backgroundColor: '#e9ecef30' }}></div>
+          style={{
+            backgroundColor: '#e9ecef30',
+            backgroundImage: patterHandler(),
+          }}></div>
         <div className="w-3/4 p-10">
           <motion.h1
             className="w-2/3 leading-snug"

@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { fontPairs as fontData } from '@/root/components/screen/Home/Components';
+import {
+  fontPairs as fontData,
+  patterns as patternData,
+} from '@/root/components/screen/Home/Components';
 import { InputContext } from '@/root/context';
 
 export const InputBox: React.FC = () => {
@@ -94,9 +97,14 @@ export const InputBox: React.FC = () => {
           <p className="font-bold text-[16px]">Pattern</p>
           <select
             className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
-            onChange={(e) => inputState.setPattern(e.target.value)}
+            onChange={(e) =>
+              inputState.setPattern(e.target.value as keyof typeof patternData)
+            }
             value={inputState.pattern}>
-            <option>Pastel</option>
+            <option>none</option>
+            <option>jigsaw</option>
+            <option>overcast</option>
+            <option>formalInvitation</option>
           </select>
         </div>
         <div className="block mt-6 w-1/2 ml-4">

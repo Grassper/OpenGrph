@@ -22,6 +22,7 @@
     "@fontsource/yellowtail": "^4.5.7",
     "@fontsource/yeseva-one": "^4.5.5",
     "framer-motion": "^6.3.3",
+    "hero-patterns": "^2.1.0",
     "next": "12.1.5",
     "next-themes": "^0.1.1",
     "react": "18.1.0",
