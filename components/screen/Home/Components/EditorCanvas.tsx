@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { BsDownload } from 'react-icons/bs';
+import { FaLeaf } from 'react-icons/fa';
 
 import { InputContext } from '@/root/context';
 
@@ -94,6 +95,122 @@ export const EditorCanvas = () => {
 
     formalFun[key]();
   };
+
+  if (inputState.theme === 'Modern') {
+    return (
+      <div className="flex flex-col items-end">
+        <button
+          className="cursor-pointer p-4 bg-red-500 text-slate-50"
+          onClick={() => downloadHandler()}>
+          <BsDownload className="h-6 w-6 text-slate-50" />
+        </button>
+        <div
+          ref={editorRef}
+          className="w-[1200px] h-[627px] flex flex-col justify-end items-end overflow-hidden"
+          style={{
+            backgroundColor: '#ffffff',
+          }}>
+          <div className="w-3/4 p-10">
+            <motion.h1
+              className="leading-snug mt-4"
+              drag
+              style={{
+                color: '#212529',
+                fontFamily:
+                  fontPairs[inputState.fontPairs]?.title.name ??
+                  'Montserrat Alternates',
+                fontSize: fontPairs[inputState.fontPairs]?.title.size ?? '38px',
+                fontWeight:
+                  fontPairs[inputState.fontPairs]?.title.weight ?? 800,
+                lineHeight:
+                  fontPairs[inputState.fontPairs]?.title.lineHeight ?? 1.25,
+              }}>
+              {inputState.title.substring(0, 70)}
+            </motion.h1>
+            <motion.p
+              className="mt-4 w-5/6"
+              drag
+              style={{
+                color: '#adb5bd',
+                fontFamily:
+                  fontPairs[inputState.fontPairs]?.description.name ??
+                  'Montserrat Alternates',
+                fontSize:
+                  fontPairs[inputState.fontPairs]?.description.size ?? '16px',
+                fontWeight:
+                  fontPairs[inputState.fontPairs]?.description.weight ?? 400,
+                lineHeight:
+                  fontPairs[inputState.fontPairs]?.description.lineHeight ??
+                  1.625,
+              }}>
+              {inputState.description.substring(0, 160)}
+            </motion.p>
+          </div>
+          <div
+            className="h-[100px] w-full"
+            style={{ backgroundColor: '#e9ecef' }}></div>
+        </div>
+      </div>
+    );
+  }
+
+  if (inputState.theme === 'Clean') {
+    return (
+      <div className="flex flex-col items-end">
+        <button
+          className="cursor-pointer p-4 bg-red-500 text-slate-50"
+          onClick={() => downloadHandler()}>
+          <BsDownload className="h-6 w-6 text-slate-50" />
+        </button>
+        <div
+          ref={editorRef}
+          className="w-[1200px] h-[627px] flex items-center justify-center overflow-hidden"
+          style={{
+            backgroundColor: '#ffffff',
+          }}>
+          <div className="w-3/4 p-10">
+            <motion.div
+              className="h-14 w-14 bg-gray-900 rounded-full"
+              drag></motion.div>
+            <motion.h1
+              className="leading-snug mt-4"
+              drag
+              style={{
+                color: '#212529',
+                fontFamily:
+                  fontPairs[inputState.fontPairs]?.title.name ??
+                  'Montserrat Alternates',
+                fontSize: fontPairs[inputState.fontPairs]?.title.size ?? '38px',
+                fontWeight:
+                  fontPairs[inputState.fontPairs]?.title.weight ?? 800,
+                lineHeight:
+                  fontPairs[inputState.fontPairs]?.title.lineHeight ?? 1.25,
+              }}>
+              {inputState.title.substring(0, 70)}
+            </motion.h1>
+            <motion.p
+              className="mt-4 w-5/6"
+              drag
+              style={{
+                color: '#adb5bd',
+                fontFamily:
+                  fontPairs[inputState.fontPairs]?.description.name ??
+                  'Montserrat Alternates',
+                fontSize:
+                  fontPairs[inputState.fontPairs]?.description.size ?? '16px',
+                fontWeight:
+                  fontPairs[inputState.fontPairs]?.description.weight ?? 400,
+                lineHeight:
+                  fontPairs[inputState.fontPairs]?.description.lineHeight ??
+                  1.625,
+              }}>
+              {inputState.description.substring(0, 160)}
+            </motion.p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col items-end">
