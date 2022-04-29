@@ -105,9 +105,9 @@ export const EditorCanvas = () => {
     formalFun[key]();
   };
 
-  const patterHandler = () => {
+  const patternHandler = () => {
     if (inputState.pattern !== 'none') {
-      return patterns[inputState.pattern]('red', 0.5);
+      return patterns[inputState.pattern]('#fff');
     }
     return '';
   };
@@ -124,14 +124,14 @@ export const EditorCanvas = () => {
           ref={editorRef}
           className="w-[1200px] h-[627px] flex flex-col justify-end items-end overflow-hidden"
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: inputState.mode === 'Light' ? '#fff' : '#111827',
           }}>
           <div className="w-3/4 p-10">
             <motion.h1
               className="leading-snug mt-4"
               drag
               style={{
-                color: '#212529',
+                color: inputState.mode === 'Light' ? '#212529' : '#fff',
                 fontFamily:
                   fontPairs[inputState.fontPairs]?.title.name ??
                   'Montserrat Alternates',
@@ -147,7 +147,7 @@ export const EditorCanvas = () => {
               className="mt-4 w-5/6"
               drag
               style={{
-                color: '#adb5bd',
+                color: inputState.mode === 'Light' ? '#adb5bd' : '#94a3b8',
                 fontFamily:
                   fontPairs[inputState.fontPairs]?.description.name ??
                   'Montserrat Alternates',
@@ -165,8 +165,8 @@ export const EditorCanvas = () => {
           <div
             className="h-[100px] w-full"
             style={{
-              backgroundColor: '#e9ecef',
-              backgroundImage: patterHandler(),
+              backgroundColor: inputState.color,
+              backgroundImage: patternHandler(),
             }}></div>
         </div>
       </div>
@@ -185,14 +185,14 @@ export const EditorCanvas = () => {
           ref={editorRef}
           className="w-[1200px] h-[627px] flex items-center justify-center overflow-hidden"
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: inputState.mode === 'Light' ? '#fff' : '#111827',
           }}>
           <div className="w-3/4 p-10">
             <motion.h1
               className="leading-snug mt-4"
               drag
               style={{
-                color: '#212529',
+                color: inputState.mode === 'Light' ? '#212529' : '#fff',
                 fontFamily:
                   fontPairs[inputState.fontPairs]?.title.name ??
                   'Montserrat Alternates',
@@ -208,7 +208,7 @@ export const EditorCanvas = () => {
               className="mt-4 w-5/6"
               drag
               style={{
-                color: '#adb5bd',
+                color: inputState.mode === 'Light' ? '#adb5bd' : '#94a3b8',
                 fontFamily:
                   fontPairs[inputState.fontPairs]?.description.name ??
                   'Montserrat Alternates',
@@ -239,20 +239,20 @@ export const EditorCanvas = () => {
         ref={editorRef}
         className="w-[1200px] h-[627px] flex justify-between items-center overflow-hidden"
         style={{
-          backgroundColor: '#ffffff',
+          backgroundColor: inputState.mode === 'Light' ? '#fff' : '#111827',
         }}>
         <div
           className="w-1/4 h-full"
           style={{
-            backgroundColor: '#e9ecef30',
-            backgroundImage: patterHandler(),
+            backgroundColor: inputState.color,
+            backgroundImage: patternHandler(),
           }}></div>
         <div className="w-3/4 p-10">
           <motion.h1
-            className="w-2/3 leading-snug"
-            drag="y"
+            className="leading-snug mt-4"
+            drag
             style={{
-              color: '#212529',
+              color: inputState.mode === 'Light' ? '#212529' : '#fff',
               fontFamily:
                 fontPairs[inputState.fontPairs]?.title.name ??
                 'Montserrat Alternates',
@@ -265,9 +265,9 @@ export const EditorCanvas = () => {
           </motion.h1>
           <motion.p
             className="mt-4 w-5/6"
-            drag="y"
+            drag
             style={{
-              color: '#adb5bd',
+              color: inputState.mode === 'Light' ? '#adb5bd' : '#94a3b8',
               fontFamily:
                 fontPairs[inputState.fontPairs]?.description.name ??
                 'Montserrat Alternates',

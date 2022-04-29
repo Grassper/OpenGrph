@@ -17,3 +17,17 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input[type='color'] {
+  -webkit-appearance: none;
+  border: none;
+  width: 100%;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch {
+  border: none;
+}

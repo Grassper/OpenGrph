@@ -77,19 +77,19 @@ export const InputBox: React.FC = () => {
             className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
             onChange={(e) => inputState.setTheme(e.target.value)}
             value={inputState.theme}>
+            <option>Minimal</option>
             <option>Clean</option>
             <option>Modern</option>
-            <option>Minimal</option>
           </select>
         </div>
         <div className="block mt-6 w-1/2 ml-4">
           <p className="font-bold text-[16px]">Color</p>
-          <select
-            className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
+          <input
+            className=" mt-4 outline-red-500 h-12"
             onChange={(e) => inputState.setColor(e.target.value)}
-            value={inputState.color}>
-            <option>Dark</option>
-          </select>
+            type="color"
+            value={inputState.color}
+          />
         </div>
       </div>
       <div className="flex">
@@ -107,7 +107,7 @@ export const InputBox: React.FC = () => {
             <option>formalInvitation</option>
           </select>
         </div>
-        <div className="block mt-6 w-1/2 ml-4">
+        {/* <div className="block mt-6 w-1/2 ml-4">
           <p className="font-bold text-[16px]">Format</p>
           <select
             className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
@@ -115,6 +115,16 @@ export const InputBox: React.FC = () => {
             value={inputState.format}>
             <option>Png</option>
             <option>Jpeg</option>
+          </select>
+        </div> */}
+        <div className="block mt-6 w-1/2 ml-4">
+          <p className="font-bold text-[16px]">Mode</p>
+          <select
+            className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
+            onChange={(e) => inputState.setMode(e.target.value)}
+            value={inputState.mode}>
+            <option>Light</option>
+            <option>Dark</option>
           </select>
         </div>
       </div>

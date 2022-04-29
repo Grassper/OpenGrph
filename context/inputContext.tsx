@@ -24,6 +24,8 @@ interface ContextValues {
   setPattern: React.Dispatch<React.SetStateAction<keyof typeof patternData>>;
   format: string;
   setFormat: React.Dispatch<React.SetStateAction<string>>;
+  mode: string;
+  setMode: React.Dispatch<React.SetStateAction<string>>;
   fontPairs: keyof typeof fontData;
   setFontPairs: React.Dispatch<React.SetStateAction<keyof typeof fontData>>;
 }
@@ -35,14 +37,16 @@ export const InputContext = React.createContext<ContextValues>({
   setTitle: () => undefined,
   description: '',
   setDescription: () => undefined,
-  theme: 'Clean',
+  theme: 'Minimal',
   setTheme: () => undefined,
-  color: '',
+  color: '#ef476f',
   setColor: () => undefined,
   pattern: 'jigsaw',
   setPattern: () => undefined,
   format: '1200 x 630',
   setFormat: () => undefined,
+  mode: 'Light',
+  setMode: () => undefined,
   fontPairs: 'Open Sans + PT Sans',
   setFontPairs: () => undefined,
 });
@@ -53,8 +57,9 @@ export const InputContextProvider: React.FC<PropsTypes> = ({ children }) => {
   const [description, setDescription] = React.useState(
     'Now, You have ability to create opengraph cover just of click of buttton'
   );
-  const [theme, setTheme] = React.useState('Clean');
-  const [color, setColor] = React.useState('');
+  const [theme, setTheme] = React.useState('Minimal');
+  const [color, setColor] = React.useState('#ef476f');
+  const [mode, setMode] = React.useState('Light');
   const [pattern, setPattern] =
     React.useState<keyof typeof patternData>('jigsaw');
   const [format, setFormat] = React.useState('Png');
@@ -79,6 +84,8 @@ export const InputContextProvider: React.FC<PropsTypes> = ({ children }) => {
     setFormat,
     fontPairs,
     setFontPairs,
+    mode,
+    setMode,
   };
 
   return (
