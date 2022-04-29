@@ -229,6 +229,46 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/josefin-sans@^4.5.6":
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/josefin-sans/-/josefin-sans-4.5.6.tgz#ec94a2a854270c6914b702d894a0a2a72400b279"
+  integrity sha512-SCdxY+yydekDs06WZx7m5CHXWHkDYwI2Vj7NruVeAoU4BslQjmsDomQ04h9Ftwlro4oFvNVQ8hHV7Rpa7K5m1A==
+
+"@fontsource/lato@^4.5.5":
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.5.5.tgz#d7371e29600528a44f5076a1604cf223168d1579"
+  integrity sha512-0KVmVCq3wZnriKVdbY+n/ZLf7Vy+dQcqpcm8kaVX4QGd6uBTgH6YWLnM1L051TtjKlal2FiE6xc/BLw116a0gQ==
+
+"@fontsource/open-sans@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.8.tgz#31f727353e89ce886e1076bd58536834e0778fda"
+  integrity sha512-3b94XDdRLqL7OlE7OjWg/4pgG825Juw8PLVEDm6h5pio0gMU89ICxfatGxHsBxMGfqad+wnvdmUweZWlELDFpQ==
+
+"@fontsource/pt-sans@^4.5.5":
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/pt-sans/-/pt-sans-4.5.5.tgz#5acc2ea7aacae37af3890e62538521d358880327"
+  integrity sha512-qzrvYDdeOYVz6Bj2CqpFowxc5OrJDC8PLpm1P4GkQ+UuKiw4G57wcQPWt7rsJDe8JxKO5lATIXkpA0BUbht/zg==
+
+"@fontsource/quicksand@^4.5.6":
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/quicksand/-/quicksand-4.5.6.tgz#f74a01a5d8e3ea3b6747029486ca44d793244025"
+  integrity sha512-I1qM4g8rZYcZcKR7/6UrL0XBYthWVfW1Ufz69GJs2N3WEyIH41t1QbWL+inOkd9VgkMjH8a3X+7mDwabqXB4IA==
+
+"@fontsource/source-code-pro@^4.5.6":
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/source-code-pro/-/source-code-pro-4.5.6.tgz#f11e6dc9f0e4db8ff2c6cf5f6e294f18b16433ef"
+  integrity sha512-idYGw+8gEyec58O5LFkJecscaQDJmTMrrRBcmrYTbS2fhSyEuaq1xtTpG8QOQCvW5CA0XrSpWVfA/1HwJjm6Fw==
+
+"@fontsource/yellowtail@^4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/yellowtail/-/yellowtail-4.5.7.tgz#cae2fc7b036aeb02fed63d34ee32be47906eab69"
+  integrity sha512-BZPYrRvnnDABRFzyN1OThVXCfNYQC0Y6BqWOuUTErMIWvBsaluYnbyRTuA4paNMU7PBf7USdYL70hG8oEVzUOA==
+
+"@fontsource/yeseva-one@^4.5.5":
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/yeseva-one/-/yeseva-one-4.5.5.tgz#4c276e31cca8cd82af40c008ca7f9172ac4abb9e"
+  integrity sha512-vhUjKO0l7u/leRAtJXzSNPTVGrXIW9Bloua4D94Gou6+Oi984S79YXp0KrGyCRiyWAv/KoqlxXeedR4M/aJXMA==
+
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.9.5.tgz#2cbaf9a89460da24b5ca6531b8bbfc23e1df50c7"

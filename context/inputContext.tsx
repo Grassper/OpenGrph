@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { fontPairs as fontData } from '@/root/components/screen/Home/Components';
+
 interface PropsTypes {
   children: React.ReactNode;
 }
@@ -19,6 +21,8 @@ interface ContextValues {
   setPattern: React.Dispatch<React.SetStateAction<string>>;
   format: string;
   setFormat: React.Dispatch<React.SetStateAction<string>>;
+  fontPairs: keyof typeof fontData;
+  setFontPairs: React.Dispatch<React.SetStateAction<keyof typeof fontData>>;
 }
 
 export const InputContext = React.createContext<ContextValues>({
@@ -36,16 +40,23 @@ export const InputContext = React.createContext<ContextValues>({
   setPattern: () => undefined,
   format: '1200 x 630',
   setFormat: () => undefined,
+  fontPairs: 'Open Sans + PT Sans',
+  setFontPairs: () => undefined,
 });
 
 export const InputContextProvider: React.FC<PropsTypes> = ({ children }) => {
   const [urlFetch, setUrlFetch] = React.useState('');
-  const [title, setTitle] = React.useState('');
-  const [description, setDescription] = React.useState('');
+  const [title, setTitle] = React.useState('Hello buddy, checkout opengrph!');
+  const [description, setDescription] = React.useState(
+    'Now, You have ability to create opengraph cover just of click of buttton'
+  );
   const [theme, setTheme] = React.useState('Clean');
   const [color, setColor] = React.useState('');
   const [pattern, setPattern] = React.useState('');
   const [format, setFormat] = React.useState('Png');
+  const [fontPairs, setFontPairs] = React.useState<keyof typeof fontData>(
+    'Open Sans + PT Sans'
+  );
 
   const contextValues: ContextValues = {
     urlFetch,
@@ -62,6 +73,8 @@ export const InputContextProvider: React.FC<PropsTypes> = ({ children }) => {
     setPattern,
     format,
     setFormat,
+    fontPairs,
+    setFontPairs,
   };
 
   return (

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { fontPairs as fontData } from '@/root/components/screen/Home/Components';
 import { InputContext } from '@/root/context';
 
 export const InputBox: React.FC = () => {
@@ -7,7 +8,7 @@ export const InputBox: React.FC = () => {
 
   return (
     <div className="bg-white dark:bg-slate-900 px-10 py-14 w-[450px] font-secondary text-slate-900 dark:text-slate-50 rounded-3xl">
-      <div className="block">
+      {/* <div className="block">
         <p className="font-bold text-[16px]">Url Fetch</p>
         <input
           className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg dark:placeholder:text-slate-500 placeholder:text-slate-300"
@@ -16,7 +17,7 @@ export const InputBox: React.FC = () => {
           placeholder="https://www.blockscribers.com"
           value={inputState.urlFetch}
         />
-      </div>
+      </div> */}
       <div className="block mt-6">
         <p className="font-bold text-[16px]">Title</p>
         <input
@@ -35,6 +36,36 @@ export const InputBox: React.FC = () => {
           rows={5}
           value={inputState.description}
         />
+      </div>
+      <div className="block mt-6">
+        <p className="font-bold text-[16px]">Font pairs</p>
+        <select
+          className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
+          onChange={(e) =>
+            inputState.setFontPairs(e.target.value as keyof typeof fontData)
+          }
+          value={inputState.fontPairs}>
+          <option>Open Sans + PT Sans</option>
+          <option>Quicksand + Source Sans Pro</option>
+          <option>Yellowtail + Lato</option>
+          <option>Yeseva One + Josefin Sans</option>
+          {/* <option>Open Sans Condensed + Lora</option>
+          <option>Raleway + Libre Baskerville</option>
+          <option>Rubik + Roboto Mono</option>
+          <option>Playfair Display + Quattrocento Sans</option>
+          <option>Merriweather Sans + Merriweather</option>
+          <option>Oswald + Noto Serif</option>
+          <option>Lora + Poppins</option>
+          <option>Lato + Crimson Text</option>
+          <option>Great Vibes + Montserrat</option>
+          <option>Mulish + Space Mono</option>
+          <option>Fredoka One + ABeeZee</option>
+          <option>Fjalla One + Nunito</option>
+          <option>Teko + Montserrat</option>
+          <option>Bangers + Gudea</option>
+          <option>Copse + Mulish</option>
+          <option>Anton + Roboto</option> */}
+        </select>
       </div>
       <div className="flex">
         <div className="block mt-6 w-1/2">
