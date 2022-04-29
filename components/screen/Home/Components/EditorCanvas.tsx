@@ -122,7 +122,7 @@ export const EditorCanvas = () => {
         </button>
         <div
           ref={editorRef}
-          className="w-[1200px] h-[627px] flex flex-col justify-end items-end overflow-hidden"
+          className="w-[900px] h-[500px] 2xl:w-[1200px] 2xl:h-[627px]  flex flex-col justify-end items-end overflow-hidden"
           style={{
             backgroundColor: inputState.mode === 'Light' ? '#fff' : '#111827',
           }}>
@@ -183,7 +183,7 @@ export const EditorCanvas = () => {
         </button>
         <div
           ref={editorRef}
-          className="w-[1200px] h-[627px] flex items-center justify-center overflow-hidden"
+          className="w-[900px] h-[500px] 2xl:w-[1200px] 2xl:h-[627px] flex items-center justify-center overflow-hidden"
           style={{
             backgroundColor: inputState.mode === 'Light' ? '#fff' : '#111827',
           }}>
@@ -237,7 +237,7 @@ export const EditorCanvas = () => {
       </button>
       <div
         ref={editorRef}
-        className="w-[1200px] h-[627px] flex justify-between items-center overflow-hidden"
+        className="w-[900px] h-[500px] 2xl:w-[1200px] 2xl:h-[627px] flex justify-between items-center overflow-hidden"
         style={{
           backgroundColor: inputState.mode === 'Light' ? '#fff' : '#111827',
         }}>

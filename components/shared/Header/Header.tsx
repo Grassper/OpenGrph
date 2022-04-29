@@ -8,6 +8,16 @@ import { BsSunrise, BsSunsetFill } from 'react-icons/bs';
 export const Header: React.FC = () => {
   const { theme, setTheme } = useTheme();
 
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <div className="bg-white dark:bg-slate-900 rounded-br-3xl rounded-bl-3xl">
       <div className="mx-auto px-4 py-6 font-secondary sm:px-6 lg:px-8">
@@ -33,13 +43,10 @@ export const Header: React.FC = () => {
                 <BsSunsetFill className="h-6 w-6" />
               </button>
             )}
-            <Link href="/" passHref>
-              <a className="hidden text-sm font-light dark:hover:text-white md:block">
-                Use cases
-              </a>
-            </Link>
-            <Link href="/signin" passHref>
-              <a className="rounded-full hidden bg-red-600 px-6 py-2 text-sm font-semibold text-slate-50 hover:brightness-125 md:block">
+            <Link href="https://github.com/Grassper/OpenGrph" passHref>
+              <a
+                className="rounded-full hidden bg-red-600 px-6 py-2 text-sm font-semibold text-slate-50 hover:brightness-125 md:block"
+                target="_blank">
                 <AiFillGithub className="h-6 w-6" />
               </a>
             </Link>
