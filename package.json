@@ -25,6 +25,7 @@
     "hero-patterns": "^2.1.0",
     "next": "12.1.5",
     "next-themes": "^0.1.1",
+    "preact": "^10.7.1",
     "react": "18.1.0",
     "react-component-export-image": "^1.0.6",
     "react-dom": "18.1.0",

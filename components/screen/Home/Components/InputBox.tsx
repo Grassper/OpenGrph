@@ -10,7 +10,7 @@ export const InputBox: React.FC = () => {
   const inputState = React.useContext(InputContext);
 
   return (
-    <div className="bg-white dark:bg-slate-900 px-10 py-14 w-[450px] font-secondary text-slate-900 dark:text-slate-50 rounded-3xl">
+    <div className="bg-white dark:bg-slate-900 px-8 py-10 2xl:px-10 2xl:py-14 w-[350px] 2xl:w-[450px] font-secondary text-slate-900 dark:text-slate-50 rounded-3xl">
       {/* <div className="block">
         <p className="font-bold text-[16px]">Url Fetch</p>
         <input

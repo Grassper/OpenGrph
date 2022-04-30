@@ -122,7 +122,7 @@ export const EditorCanvas = () => {
         </button>
         <div
           ref={editorRef}
-          className="w-[900px] h-[500px] 2xl:w-[1200px] 2xl:h-[627px]  flex flex-col justify-end items-end overflow-hidden"
+          className="w-[1000px] h-[530px] 2xl:w-[1200px] 2xl:h-[630px]  flex flex-col justify-end items-end overflow-hidden"
           style={{
             backgroundColor: inputState.mode === 'Light' ? '#fff' : '#111827',
           }}>
