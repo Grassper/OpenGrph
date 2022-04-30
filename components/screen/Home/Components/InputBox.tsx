@@ -11,7 +11,7 @@ export const InputBox: React.FC = () => {
 
   return (
     <div className="bg-white dark:bg-slate-900 px-8 pt-4 pb-10 w-[400px] font-secondary text-slate-900 dark:text-slate-50 rounded-3xl">
-      <div className="block mt-6">
+      <div className="block mt-4">
         <p className="font-bold text-[16px]">Title</p>
         <input
           className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg "
@@ -20,7 +20,7 @@ export const InputBox: React.FC = () => {
           value={inputState.title}
         />
       </div>
-      <div className="block mt-6">
+      <div className="block mt-4">
         <p className="font-bold text-[16px]">Description</p>
         <textarea
           className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg resize-none"
@@ -30,7 +30,7 @@ export const InputBox: React.FC = () => {
           value={inputState.description}
         />
       </div>
-      <div className="block mt-6">
+      <div className="block mt-4">
         <p className="font-bold text-[16px]">Font pairs</p>
         <select
           className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
@@ -61,7 +61,7 @@ export const InputBox: React.FC = () => {
         </select>
       </div>
       <div className="flex">
-        <div className="block mt-6 w-1/2">
+        <div className="block mt-4 w-1/2">
           <p className="font-bold text-[16px]">Theme</p>
           <select
             className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
@@ -72,7 +72,7 @@ export const InputBox: React.FC = () => {
             <option>Modern</option>
           </select>
         </div>
-        <div className="block mt-6 w-1/2 ml-4">
+        <div className="block mt-4 w-1/2 ml-4">
           <p className="font-bold text-[16px]">Color</p>
           <input
             className=" mt-4 outline-red-500 h-12"
@@ -83,7 +83,7 @@ export const InputBox: React.FC = () => {
         </div>
       </div>
       <div className="flex">
-        <div className="block mt-6 w-1/2">
+        <div className="block mt-4 w-1/2">
           <p className="font-bold text-[16px]">Pattern</p>
           <select
             className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
@@ -97,7 +97,7 @@ export const InputBox: React.FC = () => {
             <option>formalInvitation</option>
           </select>
         </div>
-        {/* <div className="block mt-6 w-1/2 ml-4">
+        {/* <div className="block mt-4 w-1/2 ml-4">
           <p className="font-bold text-[16px]">Format</p>
           <select
             className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
@@ -107,7 +107,7 @@ export const InputBox: React.FC = () => {
             <option>Jpeg</option>
           </select>
         </div> */}
-        <div className="block mt-6 w-1/2 ml-4">
+        <div className="block mt-4 w-1/2 ml-4">
           <p className="font-bold text-[16px]">Mode</p>
           <select
             className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
