@@ -36,7 +36,7 @@ export const CanvasWrapper: React.FC<CanvasWrapper_> = (props) => {
     <div className="flex flex-col items-end">
       <div>
         <button
-          className="cursor-pointer p-4 bg-red-500 text-slate-50"
+          className="cursor-pointer h-[50px] w-[50px] bg-red-500 text-slate-50 flex items-center justify-center"
           onClick={() => downloadHandler()}>
           <BsDownload className="h-6 w-6 text-slate-50" />
         </button>

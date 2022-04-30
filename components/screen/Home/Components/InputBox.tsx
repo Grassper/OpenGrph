@@ -10,7 +10,7 @@ export const InputBox: React.FC = () => {
   const inputState = React.useContext(InputContext);
 
   return (
-    <div className="bg-white dark:bg-slate-900 px-8 pt-4 pb-10 w-[400px] font-secondary text-slate-900 dark:text-slate-50 rounded-3xl">
+    <div className="bg-white dark:bg-slate-900 px-8 pt-4 pb-10 w-[400px] font-secondary text-slate-900 dark:text-slate-50">
       <div className="block mt-4">
         <p className="font-bold text-[16px]">Title</p>
         <input
