@@ -11,7 +11,7 @@ export const Home: React.FC = () => {
       <Header />
       <InputContextProvider>
         <div className="items-center justify-between hidden xl:flex">
-          <div className="mt-6 ml-6">
+          <div className="mt-4 ml-6">
             <InputBox />
           </div>
           <EditorCanvas />

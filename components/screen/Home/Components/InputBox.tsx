@@ -10,7 +10,7 @@ export const InputBox: React.FC = () => {
   const inputState = React.useContext(InputContext);
 
   return (
-    <div className="bg-white dark:bg-slate-900 px-8 py-10 2xl:px-10 2xl:py-14 w-[350px] 2xl:w-[450px] font-secondary text-slate-900 dark:text-slate-50 rounded-3xl">
+    <div className="bg-white dark:bg-slate-900 px-8 pt-4 pb-10 w-[400px] font-secondary text-slate-900 dark:text-slate-50 rounded-3xl">
       {/* <div className="block">
         <p className="font-bold text-[16px]">Url Fetch</p>
         <input
@@ -93,7 +93,7 @@ export const InputBox: React.FC = () => {
         </div>
       </div>
       <div className="flex">
-        <div className="block mt-6 w-1/2">
+        {/* <div className="block mt-6 w-1/2">
           <p className="font-bold text-[16px]">Pattern</p>
           <select
             className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
@@ -106,7 +106,7 @@ export const InputBox: React.FC = () => {
             <option>overcast</option>
             <option>formalInvitation</option>
           </select>
-        </div>
+        </div> */}
         {/* <div className="block mt-6 w-1/2 ml-4">
           <p className="font-bold text-[16px]">Format</p>
           <select
@@ -117,7 +117,7 @@ export const InputBox: React.FC = () => {
             <option>Jpeg</option>
           </select>
         </div> */}
-        <div className="block mt-6 w-1/2 ml-4">
+        {/* <div className="block mt-6 w-1/2 ml-4">
           <p className="font-bold text-[16px]">Mode</p>
           <select
             className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
@@ -126,7 +126,7 @@ export const InputBox: React.FC = () => {
             <option>Light</option>
             <option>Dark</option>
           </select>
-        </div>
+        </div> */}
       </div>
     </div>
   );
