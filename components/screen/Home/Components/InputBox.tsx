@@ -3,7 +3,7 @@ import React from 'react';
 import {
   fontPairs as fontData,
   patterns as patternData,
-} from '@/root/components/screen/Home/Components';
+} from '@/root/components/screen/Home/Data';
 import { InputContext } from '@/root/context';
 
 export const InputBox: React.FC = () => {
@@ -11,16 +11,6 @@ export const InputBox: React.FC = () => {
 
   return (
     <div className="bg-white dark:bg-slate-900 px-8 pt-4 pb-10 w-[400px] font-secondary text-slate-900 dark:text-slate-50 rounded-3xl">
-      {/* <div className="block">
-        <p className="font-bold text-[16px]">Url Fetch</p>
-        <input
-          className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg dark:placeholder:text-slate-500 placeholder:text-slate-300"
-          maxLength={70}
-          onChange={(e) => inputState.setUrlFetch(e.target.value)}
-          placeholder="https://www.blockscribers.com"
-          value={inputState.urlFetch}
-        />
-      </div> */}
       <div className="block mt-6">
         <p className="font-bold text-[16px]">Title</p>
         <input
@@ -36,7 +26,7 @@ export const InputBox: React.FC = () => {
           className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg resize-none"
           maxLength={160}
           onChange={(e) => inputState.setDescription(e.target.value)}
-          rows={5}
+          rows={3}
           value={inputState.description}
         />
       </div>
@@ -52,7 +42,7 @@ export const InputBox: React.FC = () => {
           <option>Quicksand + Source Sans Pro</option>
           <option>Yellowtail + Lato</option>
           <option>Yeseva One + Josefin Sans</option>
-          {/* <option>Open Sans Condensed + Lora</option>
+          <option>Open Sans Condensed + Lora</option>
           <option>Raleway + Libre Baskerville</option>
           <option>Rubik + Roboto Mono</option>
           <option>Playfair Display + Quattrocento Sans</option>
@@ -67,7 +57,7 @@ export const InputBox: React.FC = () => {
           <option>Teko + Montserrat</option>
           <option>Bangers + Gudea</option>
           <option>Copse + Mulish</option>
-          <option>Anton + Roboto</option> */}
+          <option>Anton + Roboto</option>
         </select>
       </div>
       <div className="flex">
@@ -93,7 +83,7 @@ export const InputBox: React.FC = () => {
         </div>
       </div>
       <div className="flex">
-        {/* <div className="block mt-6 w-1/2">
+        <div className="block mt-6 w-1/2">
           <p className="font-bold text-[16px]">Pattern</p>
           <select
             className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
@@ -106,7 +96,7 @@ export const InputBox: React.FC = () => {
             <option>overcast</option>
             <option>formalInvitation</option>
           </select>
-        </div> */}
+        </div>
         {/* <div className="block mt-6 w-1/2 ml-4">
           <p className="font-bold text-[16px]">Format</p>
           <select
@@ -117,7 +107,7 @@ export const InputBox: React.FC = () => {
             <option>Jpeg</option>
           </select>
         </div> */}
-        {/* <div className="block mt-6 w-1/2 ml-4">
+        <div className="block mt-6 w-1/2 ml-4">
           <p className="font-bold text-[16px]">Mode</p>
           <select
             className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg"
@@ -126,7 +116,7 @@ export const InputBox: React.FC = () => {
             <option>Light</option>
             <option>Dark</option>
           </select>
-        </div> */}
+        </div>
       </div>
     </div>
   );

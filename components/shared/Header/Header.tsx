@@ -5,7 +5,7 @@ import { BiDna } from 'react-icons/bi';
 
 export const Header: React.FC = () => {
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-br-3xl rounded-bl-3xl sticky">
+    <div className="bg-white dark:bg-slate-900 rounded-br-3xl rounded-bl-3xl absolute top-0 w-full">
       <div className="mx-auto px-4 py-6 font-secondary sm:px-6 lg:px-8">
         <div className="flex w-full items-center justify-between ">
           <div className="flex items-center md:flex-grow xl:w-[600px] xl:flex-grow-0">

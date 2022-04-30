@@ -3,7 +3,7 @@ import React from 'react';
 import {
   fontPairs as fontData,
   patterns as patternData,
-} from '@/root/components/screen/Home/Components';
+} from '@/root/components/screen/Home/Data';
 
 interface PropsTypes {
   children: React.ReactNode;
