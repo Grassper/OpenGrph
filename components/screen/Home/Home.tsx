@@ -7,7 +7,7 @@ import { EditorCanvas, InputBox } from './Components';
 
 export const Home: React.FC = () => {
   return (
-    <div className="overflow-hidden h-screen w-screen flex items-center">
+    <div className="overflow-hidden">
       <Header />
       <InputContextProvider>
         <div className="items-center justify-between hidden xl:flex w-full">

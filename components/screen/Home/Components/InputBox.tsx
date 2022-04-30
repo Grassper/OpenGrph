@@ -22,11 +22,10 @@ export const InputBox: React.FC = () => {
       </div>
       <div className="block mt-4">
         <p className="font-bold text-[16px]">Description</p>
-        <textarea
+        <input
           className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg resize-none"
           maxLength={160}
           onChange={(e) => inputState.setDescription(e.target.value)}
-          rows={3}
           value={inputState.description}
         />
       </div>
