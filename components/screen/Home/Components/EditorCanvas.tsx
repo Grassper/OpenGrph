@@ -8,13 +8,22 @@ import { CanvasWrapper } from './CanvasWrapper';
 
 export const EditorCanvas = () => {
   const inputState = React.useContext(InputContext);
+  const [backgroundImage, setBackgroundImage] = React.useState('');
 
-  const patternHandler = () => {
-    if (inputState.pattern !== 'none') {
-      return patterns[inputState.pattern]('#fff');
-    }
-    return '';
-  };
+  React.useEffect(() => {
+    const patternHandler = async () => {
+      if (inputState.pattern !== 'none') {
+        const module = await import(
+          `@/root/patterns/${patterns[inputState.pattern]}`
+        );
+        setBackgroundImage(module[Object.keys(module)[0]]('#fff'));
+      } else {
+        setBackgroundImage('');
+      }
+    };
+
+    patternHandler();
+  }, [inputState.pattern]);
 
   if (inputState.theme === 'Modern') {
     return (
@@ -60,7 +69,7 @@ export const EditorCanvas = () => {
             className="h-[100px] w-full"
             style={{
               backgroundColor: inputState.color,
-              backgroundImage: patternHandler(),
+              backgroundImage: backgroundImage,
             }}></div>
         </div>
       </CanvasWrapper>
@@ -119,7 +128,7 @@ export const EditorCanvas = () => {
           className="w-1/4 h-[530px]"
           style={{
             backgroundColor: inputState.color,
-            backgroundImage: patternHandler(),
+            backgroundImage: backgroundImage,
           }}></div>
         <div className="w-3/4 p-10">
           <motion.h1
