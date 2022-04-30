@@ -40,7 +40,11 @@ import type { AppProps } from 'next/app';
 import { DefaultSeo, NextSeo } from 'next-seo';
 import { ThemeProvider } from 'next-themes';
 
+import { useAnalytics } from '@/root/hooks/useAnalytics';
+
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+  useAnalytics();
+
   return (
     <>
       <NextSeo
