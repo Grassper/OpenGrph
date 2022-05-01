@@ -39,15 +39,15 @@ export const InputContext = React.createContext<ContextValues>({
   setDescription: () => undefined,
   theme: 'Minimal',
   setTheme: () => undefined,
-  color: '#ef476f',
+  color: '#0B5351',
   setColor: () => undefined,
-  pattern: 'jigsaw',
+  pattern: 'jupiter',
   setPattern: () => undefined,
   format: '1200 x 630',
   setFormat: () => undefined,
-  mode: 'Light',
+  mode: 'Dark',
   setMode: () => undefined,
-  fontPairs: 'Open Sans + PT Sans',
+  fontPairs: 'Bangers + Gudea',
   setFontPairs: () => undefined,
 });
 
@@ -58,14 +58,13 @@ export const InputContextProvider: React.FC<PropsTypes> = ({ children }) => {
     'Now, You have ability to create opengraph cover just of click of buttton'
   );
   const [theme, setTheme] = React.useState('Minimal');
-  const [color, setColor] = React.useState('#ef476f');
-  const [mode, setMode] = React.useState('Light');
+  const [color, setColor] = React.useState('#0B5351');
+  const [mode, setMode] = React.useState('Dark');
   const [pattern, setPattern] =
-    React.useState<keyof typeof patternData>('jigsaw');
+    React.useState<keyof typeof patternData>('jupiter');
   const [format, setFormat] = React.useState('Png');
-  const [fontPairs, setFontPairs] = React.useState<keyof typeof fontData>(
-    'Open Sans + PT Sans'
-  );
+  const [fontPairs, setFontPairs] =
+    React.useState<keyof typeof fontData>('Bangers + Gudea');
 
   const contextValues: ContextValues = {
     urlFetch,
