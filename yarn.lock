@@ -309,6 +309,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/merriweather/-/merriweather-4.5.8.tgz#2c9e86f7f1a8c4e29c10682eb6966cbe6c396471"
   integrity sha512-sygVh+v1LCK3Nu2x/VLFwaZorsCE+G5SoxXUx632QH8A6Fh2HWxX2Pzs8iL5P7fAjgM4nyF6PxQmfT3hhOykfg==
 
+"@fontsource/montserrat-alternates@^4.5.5":
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/montserrat-alternates/-/montserrat-alternates-4.5.5.tgz#d1e8987251beb60c72a16987a9fa9da48903e8a9"
+  integrity sha512-A2QxfZt896PPY5f2Pdhkz/7jAsoKIoKv2tFFiAfiZq0UZeQKJpcA/pwGCn5FLp64Z5J2bQQLrPzLAUIxmT9VwA==
+
 "@fontsource/montserrat@^4.5.7":
   version "4.5.7"
   resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.7.tgz#5fa342958655d3309eeae552a409f75a5453173f"

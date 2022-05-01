@@ -35,6 +35,11 @@ import '@fontsource/gudea';
 import '@fontsource/copse';
 import '@fontsource/anton';
 import '@fontsource/roboto';
+import '@fontsource/montserrat-alternates/400.css';
+import '@fontsource/montserrat-alternates/500.css';
+import '@fontsource/montserrat-alternates/600.css';
+import '@fontsource/montserrat-alternates/700.css';
+import '@fontsource/montserrat-alternates/800.css';
 
 import type { AppProps } from 'next/app';
 import { DefaultSeo, NextSeo } from 'next-seo';
