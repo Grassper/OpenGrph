@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { AiFillGithub, AiOutlineMenu } from 'react-icons/ai';
+import { AiFillGithub, AiFillStar } from 'react-icons/ai';
 import { BiDna } from 'react-icons/bi';
 
 export const Header: React.FC = () => {
@@ -17,16 +17,12 @@ export const Header: React.FC = () => {
           <div className="flex items-center space-x-3 text-slate-400 sm:space-x-4 xl:space-x-6">
             <Link href="https://github.com/Grassper/OpenGrph" passHref>
               <a
-                className="rounded-full hidden bg-red-600 px-6 py-2 text-sm font-semibold text-slate-50 hover:brightness-125 md:block"
+                className="rounded-full  bg-red-600 px-6 py-2 text-sm font-semibold text-slate-50 hover:brightness-125 flex space-x-2"
                 target="_blank">
+                <AiFillStar className="h-6 w-6 text-amber-500" />
                 <AiFillGithub className="h-6 w-6" />
               </a>
             </Link>
-            <button
-              className="cursor-pointer rounded-full border border-slate-400 
-                p-2 md:hidden ">
-              <AiOutlineMenu className="h-4 w-4" />
-            </button>
           </div>
         </div>
       </div>

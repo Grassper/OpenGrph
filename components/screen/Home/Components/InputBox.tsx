@@ -12,7 +12,11 @@ export const InputBox: React.FC = () => {
   return (
     <div className="bg-white dark:bg-slate-900 px-8 pt-4 pb-10 w-[400px] font-secondary text-slate-900 dark:text-slate-50">
       <div className="block mt-4">
-        <p className="font-bold text-[16px]">Title</p>
+        <div className="flex items-center justify-between">
+          <p className="font-bold text-[16px]">Title</p>
+          <p className="text-[12px] text-slate-400">Max 70 chars</p>
+        </div>
+
         <input
           className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg "
           maxLength={70}
@@ -21,7 +25,10 @@ export const InputBox: React.FC = () => {
         />
       </div>
       <div className="block mt-4">
-        <p className="font-bold text-[16px]">Description</p>
+        <div className="flex items-center justify-between">
+          <p className="font-bold text-[16px]">Description</p>
+          <p className="text-[12px] text-slate-400">Max 160 chars</p>
+        </div>
         <input
           className="bg-slate-100 dark:bg-gray-800 w-full mt-4 p-4 outline-red-500 rounded-lg resize-none"
           maxLength={160}
