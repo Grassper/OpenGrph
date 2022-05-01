@@ -55,7 +55,7 @@ export const InputContextProvider: React.FC<PropsTypes> = ({ children }) => {
   const [urlFetch, setUrlFetch] = React.useState('');
   const [title, setTitle] = React.useState('Hello buddy, checkout opengrph!');
   const [description, setDescription] = React.useState(
-    'Now, You have ability to create opengraph cover just of click of buttton'
+    'Now, You have an ability to create opengraph cover just by click of buttton'
   );
   const [theme, setTheme] = React.useState('Minimal');
   const [color, setColor] = React.useState('#0B5351');
