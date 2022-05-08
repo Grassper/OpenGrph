@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import React from 'react';
 import { AiFillGithub, AiFillStar } from 'react-icons/ai';
@@ -15,6 +17,19 @@ export const Header: React.FC = () => {
             </span>
           </div>
           <div className="flex items-center space-x-3 text-slate-400 sm:space-x-4 xl:space-x-6">
+            <Link
+              href="https://www.producthunt.com/posts/opengrph?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-opengrph"
+              passHref>
+              <a target="_blank">
+                <img
+                  alt="OpenGrph - Super&#0032;fast&#0032;open&#0032;graph&#0032;&#0038;&#0032;cover&#0032;image&#0032;creator | Product Hunt"
+                  className="w-[250px] h-[54px]"
+                  height="54"
+                  src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=345753&theme=light"
+                  width="250"
+                />
+              </a>
+            </Link>
             <Link href="https://github.com/Grassper/OpenGrph" passHref>
               <a
                 className="rounded-full  bg-red-600 px-6 py-2 text-sm font-semibold text-slate-50 hover:brightness-125 flex space-x-2"
